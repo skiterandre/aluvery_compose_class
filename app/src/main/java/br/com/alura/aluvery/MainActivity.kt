@@ -1,0 +1,25 @@
+package br.com.alura.aluvery
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
+import br.com.alura.aluvery.ui.screens.HomeScreen
+import br.com.alura.aluvery.ui.theme.AluveryTheme
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            App()
+        }
+    }
+}
+
+@Composable
+fun App() {
+    AluveryTheme {
+        HomeScreen()
+    }
+}
